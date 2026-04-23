@@ -1,0 +1,23 @@
+1. Confusion Matrix
+
+The confusion_matrix is a 2x2 table that shows exactly where the model succeeded and where it failed:
+
+Top-Left (True Negative): People who do not have diabetes and were correctly predicted as healthy.
+
+Top-Right (False Positive): Healthy people who were wrongly predicted as having diabetes (Type I error).
+
+Bottom-Left (False Negative): People with diabetes who were wrongly predicted as healthy (Type II error). In medical projects, you want this number to be as low as possible.
+
+Bottom-Right (True Positive): People with diabetes who were correctly identified by the model.
+
+2. Classification Report
+
+The classification_report provides three key metrics for each class (0 = No Diabetes, 1 = Diabetes):
+
+    Precision: "Of everyone the model labeled as having diabetes, how many actually had it?" High precision means fewer false alarms.
+
+    Recall: "Of everyone who actually has diabetes, how many did the model find?" High recall means the model is good at "catching" the disease.
+
+    F1-Score: The harmonic mean of Precision and Recall. It is the best single metric to use if your data is imbalanced (e.g., if many more people are healthy than diabetic).
+
+    Support: The actual number of occurrences of each class in your y_test set.
